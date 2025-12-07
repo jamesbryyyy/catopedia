@@ -1,0 +1,145 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box;
+}
+
+/* ---------- HEADER ---------- */
+header{
+  background-color: rgb(11, 11, 148);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 70px;
+  position: sticky; 
+  top: 0;
+  z-index: 100;
+}
+
+header h3{
+  font-size: 24px;
+}
+
+header nav ul{
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li{
+  list-style: none;
+}
+
+header nav ul li a{
+  color:white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav ul li a:hover{
+  opacity: 0.8;
+}
+
+/* ---------- MAIN ---------- */
+main{
+  padding: 20px;
+  min-height: calc(100vh - 70px);
+}
+
+section {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* LANDING SECTION */
+.landing{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.landing .left, .landing .right{
+  flex: 1;
+}
+
+.landing img{
+  width: 100%;
+  height: auto;
+}
+
+.about, .services{
+  text-align: center;
+}
+
+/* SERVICE CARDS */
+.service-cards{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.service-cards .card{
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1 1 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+  background: #111186;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer nav ul{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+footer nav ul li{
+  list-style: none;
+}
+
+footer nav ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+footer nav ul li a:hover{
+  opacity: 0.8;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width: 900px){
+  header h3{
+    font-size: 20px;
+  }
+
+  .landing{
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media(max-width: 600px){
+  header nav ul{
+    display: none;  /* later can add hamburger menu */
+  }
+
+  header{
+    justify-content: center;
+  }
+}
